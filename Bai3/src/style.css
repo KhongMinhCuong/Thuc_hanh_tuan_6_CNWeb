@@ -1,0 +1,263 @@
+/* ==============================
+   CỬA HÀNG SÁCH KMC - STYLE.CSS
+   ============================== */
+
+/* ========= RESET & CƠ BẢN ========= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========= HEADER ========= */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* ========= NAVIGATION ========= */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #f1c40f;
+}
+
+/* ========= INTRO ========= */
+.intro {
+  text-align: center;
+  padding: 40px 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* ========= PRODUCTS ========= */
+#products {
+  margin: 40px 0;
+}
+
+#products h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Bố cục sản phẩm theo lưới */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* Mỗi sản phẩm */
+.products article {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ảnh sản phẩm đồng bộ kích cỡ */
+.products img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;  /* Giữ tỉ lệ gốc */
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Hover sản phẩm */
+.products article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.products h3 {
+  color: #34495e;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.products p {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.price {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+/* ========= CONTACT FORM ========= */
+#contact {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+#contact h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* ========= FOOTER ========= */
+footer {
+  background-color: #2c3e50;
+  color: #ccc;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 900px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .intro, #contact {
+    padding: 20px 10px;
+  }
+
+  .products {
+    grid-template-columns: 1fr; /* 1 sản phẩm / hàng */
+  }
+
+  .products article {
+    max-width: none;
+    width: 90%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+.search-bar {
+  margin-bottom: 1rem;
+}
+#addProductBtn {
+  margin-bottom: 1rem;
+}
