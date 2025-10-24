@@ -1,0 +1,110 @@
+<!doctype html>
+<!--
+  index.html
+  - Semantic HTML structure for Bài 1 (Tuần 6)
+  - This file demonstrates use of <header>, <nav>, <main>, <section>, <article>, and <footer>
+  - Contains a simple contact form with labelled inputs and required attributes
+-->
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cửa hàng Sách KMC</title>
+</head>
+<body>
+  <!-- Header: store name + primary navigation -->
+  <header>
+    <div class="container">
+      <!-- Site title / brand -->
+      <h1>Cửa hàng Sách KMC</h1>
+      <!-- Navigation: use # anchors as placeholders for this exercise -->
+      <nav aria-label="Chính">
+        <a href="#">Trang chủ</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content: intro, product list, and contact form -->
+  <main class="container">
+    <!-- Intro section: short description / slogan about the store -->
+    <section class="intro">
+      <h2>Chào mừng đến với Cửa hàng Sách KMC</h2>
+      <p>Chúng tôi cung cấp các đầu sách chọn lọc: văn học, kỹ năng sống và sách chuyên môn. Tìm cuốn sách phù hợp với bạn ngay hôm nay!</p>
+    </section>
+
+    <!-- Products section: a list of products. Each product is an <article>. -->
+    <section id="products">
+      <h2>Danh sách sản phẩm</h2>
+      <div class="products">
+        <!-- Article: product 1 -->
+        <article>
+          <!-- Image: decorative/illustrative. Provide alt text for accessibility. -->
+          <img src="https://via.placeholder.com/300x180?text=Sach+1" alt="Bìa sách 1">
+          <h3>Văn học Việt Nam - Tập 1</h3>
+          <p>Tuyển chọn các truyện ngắn và tiểu thuyết tiêu biểu của nền văn học Việt Nam.</p>
+          <!-- Price: plain text; could be enhanced later with microdata or aria-describedby -->
+          <span class="price">120.000₫</span>
+        </article>
+
+        <!-- Article: product 2 -->
+        <article>
+          <img src="https://via.placeholder.com/300x180?text=Sach+2" alt="Bìa sách 2">
+          <h3>Kỹ năng sống cho người trẻ</h3>
+          <p>Hướng dẫn thực tế để phát triển thói quen tốt và kỹ năng quản lý thời gian.</p>
+          <span class="price">95.000₫</span>
+        </article>
+
+        <!-- Article: product 3 -->
+        <article>
+          <img src="https://via.placeholder.com/300x180?text=Sach+3" alt="Bìa sách 3">
+          <h3>Lập trình web cơ bản</h3>
+          <p>Cuốn sách dành cho người mới bắt đầu học HTML, CSS và JavaScript.</p>
+          <span class="price">150.000₫</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact section: simple form with labels and required fields -->
+    <section id="contact">
+      <h2>Liên hệ / Đăng ký nhận tin</h2>
+      <!--
+        Form notes:
+        - action="#" used as placeholder (no server endpoint in this exercise)
+        - Each input has a <label> linked by for/id for accessibility
+        - required attributes enforce basic browser-side validation
+      -->
+      <form action="#" method="post" aria-label="Form liên hệ">
+        <div>
+          <!-- Name input: text, required -->
+          <label for="name">Họ và tên</label>
+          <input id="name" name="name" type="text" required placeholder="Nguyễn Văn A">
+        </div>
+
+        <div>
+          <!-- Email input: type=email provides browser validation -->
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
+
+        <div>
+          <!-- Message textarea: required -->
+          <label for="message">Nội dung</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Nhập tin nhắn hoặc yêu cầu của bạn"></textarea>
+        </div>
+
+        <!-- Submit button: browser will show validation errors if required fields missing -->
+        <button type="submit">Gửi</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer: basic contact/credit info -->
+  <footer>
+    <div class="container">
+      <p>Cửa hàng Sách KMC — Địa chỉ: 123 Đường Sách, Quận A. &copy; 2025</p>
+    </div>
+  </footer>
+</body>
+</html>
